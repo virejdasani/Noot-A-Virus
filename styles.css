@@ -1,0 +1,14 @@
+html {
+  color: white;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+.pingu {
+  position: fixed;
+}
+
+.pingu-img {
+  width: 50%;
+  height: 50%;
+}
