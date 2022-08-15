@@ -1,21 +1,23 @@
 {
-  "name": "electron-quick-start",
+  "name": "noot-a-virus",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "This is NOOT A VIRUS",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack-darwin-x64": "electron-packager . 'Noot a virus' --platform=darwin --arch=x64 --icon=assets/AppIcons/icon.icns --ignore=builds",
+    "pack-darwin-arm64": "electron-packager . 'Noot a virus' --platform=darwin --arch=arm64 --icon=assets/AppIcons/icon.icns --ignore=builds",
+    "pack-win32-x64": "electron-packager . 'Noot a virus' --platform=win32 --arch=x64 --icon=assets/AppIcons/icon.ico --ignore=builds",
+    "pack-linux-x64": "electron-packager . 'Noot a virus' --platform=linux --arch=x64 --icon=assets/AppIcons/icon.png --ignore=builds"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/virejdasani/Noot-A-Virus",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "virej",
+    "pingu",
+    "noot"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Virej Dasani",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^20.0.1"
   }
