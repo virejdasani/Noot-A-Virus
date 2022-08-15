@@ -26,7 +26,7 @@ function animateDiv(myclass) {
 
   if (
     oldHeight < newHeight &&
-    (oldWidth - 10 > newWidth || oldWidth + 10 > newWidth)
+    (oldWidth - 5 > newWidth || oldWidth + 4 > newWidth)
   ) {
     console.log(oldHeight, oldWidth);
     console.log(newHeight, newWidth);
