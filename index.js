@@ -3,23 +3,9 @@ $(document).ready(function () {
 });
 
 function makeNewPosition(oldH, oldW) {
-  // wait 5 seconds
-  // setTimeout(function () {
-  //   document.getElementById("pingu-img").src = "./assets/transparent0.gif";
-  //   setTimeout(function () {
-  //     document.getElementById("pingu-img").src = "./assets/transparent45.gif";
-  //   }, 2000);
-  // }, 8000);
-
   // Get viewport dimensions (remove the dimension of the div)
   var h = $(window).height() - 150;
   var w = $(window).width() - 150;
-
-  // var oldHeight = oldH;
-  // var oldWidth = oldW;
-
-  // console.log(oldHeight);
-  // console.log(oldWidth);
 
   var newHeight = Math.floor(Math.random() * h);
   var newWidth = Math.floor(Math.random() * w);
@@ -38,7 +24,20 @@ function animateDiv(myclass) {
   let newHeight = newq[0];
   let newWidth = newq[1];
 
-  if (oldHeight < newHeight && oldWidth < newWidth) {
+  if (
+    oldHeight < newHeight &&
+    (oldWidth - 10 > newWidth || oldWidth + 10 > newWidth)
+  ) {
+    console.log(oldHeight, oldWidth);
+    console.log(newHeight, newWidth);
+
+    document.getElementById("pingu-img").src = "./assets/transparent-noot.gif";
+    var snd = new Audio("./assets/Noot-Noot.mp3");
+    snd.play();
+    setTimeout(function () {
+      document.getElementById("pingu-img").src = "./assets/transparent0.gif";
+    }, 1000);
+  } else if (oldHeight < newHeight && oldWidth < newWidth) {
     document.getElementById("pingu-img").src = "./assets/transparent45.gif";
   } else if (oldHeight < newHeight && oldWidth > newWidth) {
     document.getElementById("pingu-img").src = "./assets/transparent315.gif";
@@ -46,8 +45,6 @@ function animateDiv(myclass) {
     document.getElementById("pingu-img").src = "./assets/transparent135.gif";
   } else if (oldHeight > newHeight && oldWidth > newWidth) {
     document.getElementById("pingu-img").src = "./assets/transparent225.gif";
-  } else if (oldHeight < newHeight && oldWidth == newWidth) {
-    document.getElementById("pingu-img").src = "./assets/transparent0.gif";
   } else if (oldHeight > newHeight && oldWidth == newWidth) {
     document.getElementById("pingu-img").src = "./assets/transparent180.gif";
   } else if (oldHeight == newHeight && oldWidth < newWidth) {
