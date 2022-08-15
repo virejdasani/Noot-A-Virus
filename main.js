@@ -22,12 +22,12 @@ function createWindow() {
 
   app.dock.hide();
 
-  mainWindow.setIgnoreMouseEvents(true);
+  // mainWindow.setIgnoreMouseEvents(true);
   mainWindow.setSkipTaskbar(true);
-  mainWindow.setResizable(false);
-  mainWindow.setFocusable(false);
-  mainWindow.setAlwaysOnTop(true, "floating", 1);
-  mainWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
+  // mainWindow.setResizable(false);
+  // mainWindow.setFocusable(false);
+  // mainWindow.setAlwaysOnTop(true, "floating", 1);
+  // mainWindow.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
   mainWindow.setFullScreenable(false);
 
   if (process.platform == "darwin") {
@@ -42,7 +42,7 @@ function createWindow() {
   mainWindow.loadFile("index.html");
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools();
 }
 
 // This method will be called when Electron has finished
