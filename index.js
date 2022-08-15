@@ -1,8 +1,11 @@
 $(document).ready(function () {
-  animateDiv(".a");
+  setInterval(function () {
+    document.getElementById("start-vid").remove();
+    animateDiv(".a");
+  }, 4000);
 });
 
-function makeNewPosition(oldH, oldW) {
+function makeNewPosition() {
   // Get viewport dimensions (remove the dimension of the div)
   var h = $(window).height() - 150;
   var w = $(window).width() - 150;
@@ -10,7 +13,7 @@ function makeNewPosition(oldH, oldW) {
   var newHeight = Math.floor(Math.random() * h);
   var newWidth = Math.floor(Math.random() * w);
 
-  console.log(newHeight, newWidth);
+  // console.log(newHeight, newWidth);
 
   return [newHeight, newWidth];
 }
@@ -24,6 +27,7 @@ function animateDiv(myclass) {
   let newHeight = newq[0];
   let newWidth = newq[1];
 
+  // this logic determines the direction that pingu faces while walking on screen
   if (
     oldHeight < newHeight &&
     (oldWidth - 5 > newWidth || oldWidth + 4 > newWidth)
@@ -37,6 +41,11 @@ function animateDiv(myclass) {
     setTimeout(function () {
       document.getElementById("pingu-img").src = "./assets/transparent0.gif";
     }, 1000);
+  } else if (
+    oldHeight > newHeight &&
+    (oldWidth - 4 > newWidth || oldWidth + 3 > newWidth)
+  ) {
+    document.getElementById("pingu-img").src = "./assets/transparent180.gif";
   } else if (oldHeight < newHeight && oldWidth < newWidth) {
     document.getElementById("pingu-img").src = "./assets/transparent45.gif";
   } else if (oldHeight < newHeight && oldWidth > newWidth) {
@@ -45,8 +54,6 @@ function animateDiv(myclass) {
     document.getElementById("pingu-img").src = "./assets/transparent135.gif";
   } else if (oldHeight > newHeight && oldWidth > newWidth) {
     document.getElementById("pingu-img").src = "./assets/transparent225.gif";
-  } else if (oldHeight > newHeight && oldWidth == newWidth) {
-    document.getElementById("pingu-img").src = "./assets/transparent180.gif";
   } else if (oldHeight == newHeight && oldWidth < newWidth) {
     document.getElementById("pingu-img").src = "./assets/transparent90.gif";
   } else if (oldHeight == newHeight && oldWidth > newWidth) {

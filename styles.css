@@ -12,3 +12,11 @@ html {
   width: 300px;
   /* height: 50; */
 }
+
+#start-vid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 110%;
+  min-height: 110%;
+}
