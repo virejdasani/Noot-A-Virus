@@ -22,8 +22,6 @@ function createWindow() {
   mainWindow.maximize();
   mainWindow.show();
 
-  app.dock.hide();
-
   mainWindow.setIgnoreMouseEvents(true);
   mainWindow.setSkipTaskbar(true);
   mainWindow.setResizable(false);
@@ -37,7 +35,7 @@ function createWindow() {
     app.dock.hide();
   } else {
     // To hide the app in the dock for windows and linux
-    window.setSkipTaskbar(true);
+    mainWindow.setSkipTaskbar(true);
   }
 
   // and load the index.html of the app.
