@@ -1,7 +1,12 @@
+var pingus = 0;
+
 $(document).ready(function () {
-  setInterval(function () {
+  setTimeout(function () {
     document.getElementById("start-vid").remove();
-    animateDiv(".a");
+  }, 4000);
+  setTimeout(function () {
+    animateDiv(".a", "pingu-img1");
+    pingus += 1;
   }, 4000);
 });
 
@@ -18,7 +23,7 @@ function makeNewPosition() {
   return [newHeight, newWidth];
 }
 
-function animateDiv(myclass) {
+function animateDiv(myclass, myid) {
   var newq = makeNewPosition($(myclass).offset().top, $(myclass).offset().left);
 
   let oldHeight = $(myclass).offset().top;
@@ -35,34 +40,210 @@ function animateDiv(myclass) {
     console.log(oldHeight, oldWidth);
     console.log(newHeight, newWidth);
 
-    document.getElementById("pingu-img").src = "./assets/transparent-noot.gif";
+    document.getElementById(myid).src = "./assets/transparent-noot.gif";
     var snd = new Audio("./assets/Noot-Noot.mp3");
     snd.play();
     setTimeout(function () {
-      document.getElementById("pingu-img").src = "./assets/transparent0.gif";
+      document.getElementById(myid).src = "./assets/transparent0.gif";
     }, 1000);
+    if (pingus == 1) {
+      setTimeout(function () {
+        animateDiv(".b", "pingu-img2");
+        pingus += 1;
+      }, 1200);
+    } else if (pingus == 2) {
+      setTimeout(function () {
+        animateDiv(".c", "pingu-img3");
+        pingus += 1;
+      }, 1200);
+    } else if (pingus == 3) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".d", "pingu-img4");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 4) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".e", "pingu-img5");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 5) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".f", "pingu-img6");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 6) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".g", "pingu-img7");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 7) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".h", "pingu-img8");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 8) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".i", "pingu-img9");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 9) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".j", "pingu-img10");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 10) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".k", "pingu-img11");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 11) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".l", "pingu-img12");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 12) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".m", "pingu-img13");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 13) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".n", "pingu-img14");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 14) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".o", "pingu-img15");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 15) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".p", "pingu-img16");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 16) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".q", "pingu-img17");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 17) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".r", "pingu-img18");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 18) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".s", "pingu-img19");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 19) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".t", "pingu-img20");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 20) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".u", "pingu-img21");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 21) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".v", "pingu-img22");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 22) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".w", "pingu-img23");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 23) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".x", "pingu-img24");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 24) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".y", "pingu-img25");
+          pingus += 1;
+        }, 1200);
+      }
+    } else if (pingus == 25) {
+      if (Math.random() < 0.5) {
+        setTimeout(function () {
+          animateDiv(".z", "pingu-img26");
+          pingus += 1;
+        }, 1200);
+      }
+    }
+  } else if (oldHeight > newHeight && oldWidth > newWidth) {
+    document.getElementById(myid).src = "./assets/transparent225.gif";
+  } else if (oldHeight < newHeight && oldWidth > newWidth) {
+    document.getElementById(myid).src = "./assets/transparent315.gif";
   } else if (
     oldHeight > newHeight &&
     (oldWidth - 4 > newWidth || oldWidth + 3 > newWidth)
   ) {
-    document.getElementById("pingu-img").src = "./assets/transparent180.gif";
+    document.getElementById(myid).src = "./assets/transparent180.gif";
   } else if (oldHeight < newHeight && oldWidth < newWidth) {
-    document.getElementById("pingu-img").src = "./assets/transparent45.gif";
-  } else if (oldHeight < newHeight && oldWidth > newWidth) {
-    document.getElementById("pingu-img").src = "./assets/transparent315.gif";
+    document.getElementById(myid).src = "./assets/transparent45.gif";
   } else if (oldHeight > newHeight && oldWidth < newWidth) {
-    document.getElementById("pingu-img").src = "./assets/transparent135.gif";
-  } else if (oldHeight > newHeight && oldWidth > newWidth) {
-    document.getElementById("pingu-img").src = "./assets/transparent225.gif";
+    document.getElementById(myid).src = "./assets/transparent135.gif";
   } else if (oldHeight == newHeight && oldWidth < newWidth) {
-    document.getElementById("pingu-img").src = "./assets/transparent90.gif";
+    document.getElementById(myid).src = "./assets/transparent90.gif";
   } else if (oldHeight == newHeight && oldWidth > newWidth) {
-    document.getElementById("pingu-img").src = "./assets/transparent270.gif";
+    document.getElementById(myid).src = "./assets/transparent270.gif";
   } else {
-    document.getElementById("pingu-img").src = "./assets/transparent0.gif";
+    document.getElementById(myid).src = "./assets/transparent0.gif";
   }
 
-  $(myclass).animate({ top: newq[0], left: newq[1] }, 10000, function () {
-    animateDiv(myclass);
-  });
+  $(myclass).animate(
+    { top: newq[0], left: newq[1] },
+    Math.floor(Math.random() * (14000 - 8000)) + 8000,
+    function () {
+      animateDiv(myclass, myid);
+    }
+  );
 }
