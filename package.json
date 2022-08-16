@@ -5,10 +5,10 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pack-darwin-x64": "electron-packager . 'Noot a virus' --platform=darwin --arch=x64 --icon=assets/AppIcons/icon.icns --ignore=builds",
-    "pack-darwin-arm64": "electron-packager . 'Noot a virus' --platform=darwin --arch=arm64 --icon=assets/AppIcons/icon.icns --ignore=builds",
-    "pack-win32-x64": "electron-packager . 'Noot a virus' --platform=win32 --arch=x64 --icon=assets/AppIcons/icon.ico --ignore=builds",
-    "pack-linux-x64": "electron-packager . 'Noot a virus' --platform=linux --arch=x64 --icon=assets/AppIcons/icon.png --ignore=builds"
+    "pack-darwin-x64": "electron-packager . 'Noot a virus' --platform=darwin --arch=x64 --icon=assets/AppIcons/icon.icns --out=builds --ignore=builds",
+    "pack-darwin-arm64": "electron-packager . 'Noot a virus' --platform=darwin --arch=arm64 --icon=assets/AppIcons/icon.icns --out=builds --ignore=builds",
+    "pack-win32-x64": "electron-packager . 'Noot a virus' --platform=win32 --arch=x64 --icon=assets/AppIcons/icon.ico --out=builds --ignore=builds",
+    "pack-linux-x64": "electron-packager . 'Noot a virus' --platform=linux --arch=x64 --icon=assets/AppIcons/icon.png --out=builds --ignore=builds"
   },
   "repository": "https://github.com/virejdasani/Noot-A-Virus",
   "keywords": [
