@@ -1,1 +1,3 @@
-# video coming soon
+Watch the video!
+
+https://youtu.be/qrosbKZO47c
